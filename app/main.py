@@ -1,16 +1,19 @@
 from fastapi import FastAPI
-from .core.config import settings
+from app.core.config import settings
 from fastapi.openapi.utils import get_openapi
+
+from.routers import api
 
 
 app = FastAPI(
     openapi_url=settings.openapi_url,
     title="fastapi start",
-    description= "#############3",
+    description= "api documentaion at swagger",
     version= "0.1.0",    
 )
 
-app.openapi
+
+app.include_router(api.router)
 
 @app.get("/")
 async def root():

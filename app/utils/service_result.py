@@ -1,0 +1,1 @@
+# Exception, response setting -service result class 
