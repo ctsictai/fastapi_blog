@@ -11,6 +11,7 @@ uvicorn = "^0.17.0"
 SQLAlchemy = "^1.4.31"
 PyMySQL = "^1.0.2"
 fastapi-crudrouter = "^0.8.5"
+black = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
