@@ -1,8 +1,21 @@
+from pydantic import BaseModel
+from typing import Optional
 from starlette.testclient import TestClient
 
 from app.main import app
+from app.schemas.base_schemas import AllOptional
 
 client = TestClient(app)
+
+fake_db = {"email": "test@test.com", "password": "1q2w2e3r"}
+
+
+class User(BaseModel):
+    id: int
+    email: str
+    password: str
+    user_name: Optional[str]
+    user_type: str
 
 
 def test_user_signup():
@@ -17,3 +30,8 @@ def test_user_signup():
     )
 
     assert response.status_code == 201
+    user_id = response.json()["id"]
+
+    response_get = client.get(f"/users/{user_id}")
+    assert response.json()["email"] == "test@a.com"
+    assert response.json()["id"] == user_id
