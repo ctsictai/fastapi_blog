@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
-from app.schemas.base_schemas import AllOptional
+from src.schemas.base_schemas import AllOptional
 
 
 class BaseUser(BaseModel):

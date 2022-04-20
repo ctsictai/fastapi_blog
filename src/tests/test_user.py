@@ -2,8 +2,8 @@ from pydantic import BaseModel
 from typing import Optional
 from starlette.testclient import TestClient
 
-from app.main import app
-from app.schemas.base_schemas import AllOptional
+from src.main import app
+from src.schemas.base_schemas import AllOptional
 
 client = TestClient(app)
 

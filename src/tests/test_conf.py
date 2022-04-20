@@ -1,8 +1,8 @@
 import pytest
 from starlette.testclient import TestClient
 
-from app.core.config import create_engine, Session
-from app.main import app
+from src.core.config import create_engine, Session
+from src.main import app
 
 
 @pytest.fixture(scope="session")
