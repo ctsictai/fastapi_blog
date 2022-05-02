@@ -13,11 +13,8 @@ pytest = "^7.1.1"
 SQLAlchemy = "^1.4.35"
 aiomysql = "^0.1.0"
 PyMySQL = "^1.0.2"
-
-[tool.poetry.dev-dependencies]
-
-[tool.poetry.scripts]
-my-script = ""
+celery = "^5.2.6"
+fastapi-crudrouter = "^0.8.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
