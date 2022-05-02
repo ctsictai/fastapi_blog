@@ -1,6 +1,6 @@
 run:
-	uvicorn app.main:app --reload 
+	uvicorn src.main:app --reload 
 dev-run:
-	ENV_STATE=dev uvicorn app.main:app --reload 
+	ENV_STATE=dev uvicorn src.main:app --reload 
 prod-run:
-	ENV_STATE=prod uvicorn app.main:app --reload 
+	ENV_STATE=prod uvicorn src.main:app --reload 
